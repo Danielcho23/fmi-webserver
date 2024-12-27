@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/FMIApi/obj
+/FMIApi/.vs/FMIApi
+/FMIApi/.vs/ProjectEvaluation
