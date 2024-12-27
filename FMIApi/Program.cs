@@ -1,4 +1,7 @@
 
+using FMIApi.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace FMIApi
 {
     public class Program
@@ -13,6 +16,10 @@ namespace FMIApi
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddDbContext<AppDbContext>(options =>
+            {
+                options.UseSqlServer("connectionString");
+            });
 
             var app = builder.Build();
 
