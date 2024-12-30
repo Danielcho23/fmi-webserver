@@ -9,7 +9,7 @@ namespace FMIApi.Dtos
         public string ServiceType { get; set; }
 
         [DataType(DataType.Date)]
-        public string ScheduledDadte { get; set; }
+        public string ScheduledDate { get; set; }
 
         [Required]
         public long GarageId { get; set; }
