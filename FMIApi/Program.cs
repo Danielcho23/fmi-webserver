@@ -25,8 +25,10 @@ namespace FMIApi
             });
             builder.Services.AddDbContext<AppDbContext>(options =>
             {
-                options.UseSqlServer("Server=Emil\\SQLEXPRESS;Database=Test22;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True");
+                var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+                options.UseSqlServer(connectionString);
             });
+
 
             var app = builder.Build();
 
